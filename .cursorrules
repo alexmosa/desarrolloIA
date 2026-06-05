@@ -1,0 +1,55 @@
+# Reglas del proyecto — SalesView
+
+SalesView es un dashboard interno de métricas de ventas. Es **solo frontend**
+(React + Vite), de **solo lectura**, y trabaja con **datos mockeados** en JSON.
+No tiene backend, base de datos, ni APIs externas.
+
+## Stack
+
+- React 18 + Vite. JavaScript (`.jsx`), sin TypeScript.
+- Sin librerías de gráficas. Todas las barras (categorías, progreso de meta,
+  share por vendedor) se hacen con **CSS puro**: un `div` con
+  `width: {porcentaje}%` y `background-color`.
+
+## Datos (mockeados)
+
+- Viven en `data/sales.json`, `data/team.json` y `data/config.json`.
+- Se importan directamente en React; nunca se editan desde la interfaz.
+- `data/sales.json` se genera con `scripts/generateData.js` de forma
+  determinista (`npm run generate-data`). Si cambian los datos de ejemplo,
+  edita el generador y vuelve a correrlo en lugar de editar el JSON a mano.
+- La "fecha actual" del dashboard es `config.fecha_referencia` (no el reloj
+  real), para que las vistas por período siempre tengan datos.
+
+## Estructura
+
+- **Cada componente va en su propio archivo** dentro de `src/components/`:
+  `Header.jsx`, `PeriodFilter.jsx`, `KPICards.jsx`, `SalesTable.jsx`,
+  `CategoryBreakdown.jsx`.
+- La lógica de cálculo y filtrado vive en `src/utils/calculations.js`.
+- El formateo (montos, porcentajes, fechas) vive en `src/utils/format.js`.
+- Los montos se formatean con `toLocaleString('en-US')` y símbolo `$`.
+
+## Design system (colores)
+
+- Fondo app: `#F1F5F9` · Tarjetas: `#FFFFFF` con sombra `0 1px 3px rgba(0,0,0,0.1)`
+- Primario (azul oscuro): `#1E3A5F` · Azul claro (degradados): `#3B82F6`
+- Métrica positiva (verde): `#10B981` · Métrica negativa (rojo): `#EF4444`
+- Texto principal: `#0F172A` · Texto secundario: `#64748B` · Bordes: `#E2E8F0`
+- Colores de categoría: Electrónica `#3B82F6`, Ropa `#8B5CF6`,
+  Hogar `#F59E0B`, Alimentos `#10B981`, Deportes `#EF4444`.
+- Tipografía: Inter / system-ui. Números de KPI grandes (28–32px, peso 700).
+- Transiciones suaves de 200ms en hover, orden de tabla y cambio de filtro.
+- Las variables CSS del design system están en `src/index.css` (`:root`).
+
+## Restricciones — NO incluir
+
+- Sin login / autenticación.
+- Sin librerías de gráficas (Chart.js, Recharts, D3, etc.).
+- Sin exportar a PDF/Excel.
+- Sin modo oscuro (solo modo claro).
+- Sin datos en tiempo real ni APIs externas.
+- Sin edición de datos desde la UI (solo lectura).
+- Sin animaciones complejas (solo transiciones CSS).
+- Sin routing ni múltiples páginas (single page).
+- Sin tooltips/popovers, notificaciones/alertas ni footer.
