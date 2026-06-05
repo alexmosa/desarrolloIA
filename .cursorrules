@@ -1,0 +1,48 @@
+# SalesView — Project Rules
+
+## Stack
+- React + Vite, frontend only. No backend, database, or external APIs.
+- Mock data lives in `data/sales.json`, `data/team.json`, and `data/config.json`.
+
+## Component structure
+- One component per file under `src/components/`:
+  - `Header.jsx`, `PeriodFilter.jsx`, `KPICards.jsx`, `SalesTable.jsx`, `CategoryBreakdown.jsx`
+- Shared calculation/formatting logic belongs in `src/utils/salesUtils.js`.
+
+## Design system colors
+- Background: `#F1F5F9`
+- Cards: `#FFFFFF` with `box-shadow: 0 1px 3px rgba(0,0,0,0.1)`
+- Primary: `#1E3A5F`
+- Positive metrics: `#10B981`
+- Negative metrics: `#EF4444`
+- Text primary: `#0F172A`
+- Text secondary: `#64748B`
+- Borders: `#E2E8F0`
+- Category bars: Electrónica `#3B82F6`, Ropa `#8B5CF6`, Hogar `#F59E0B`, Alimentos `#10B981`, Deportes `#EF4444`
+
+## Typography
+- Font: Inter / system-ui
+- KPI numbers: 28–32px, weight 700
+- Change percentages: 14px, weight 600
+
+## Visual bars
+- Use CSS-only progress bars (`div` with dynamic `width` %). No Chart.js, Recharts, or D3.
+
+## Formatting
+- Currency: `toLocaleString('en-US')` with `$` prefix.
+
+## Do NOT include
+- Login/authentication
+- Chart libraries
+- PDF/Excel export
+- Dark mode
+- Real-time data or external APIs
+- Data editing UI
+- Complex animations (only 200ms CSS transitions)
+- Multi-page routing
+- Tooltips, popovers, notifications, or footer
+
+## Behavior
+- Period filter recalculates all metrics; comparison uses the same-length prior period.
+- Table sorting: one active column, toggle asc/desc on repeat click.
+- Single-page read-only dashboard.

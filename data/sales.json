@@ -1,0 +1,667 @@
+[
+  {
+    "id": "TX-0012",
+    "vendedor": "Ana Martínez",
+    "categoria": "Hogar",
+    "monto": 31143.86,
+    "fecha": "2026-06-04"
+  },
+  {
+    "id": "TX-0036",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Alimentos",
+    "monto": 58460.29,
+    "fecha": "2026-06-02"
+  },
+  {
+    "id": "TX-0073",
+    "vendedor": "Laura Torres",
+    "categoria": "Ropa",
+    "monto": 35195.85,
+    "fecha": "2026-06-01"
+  },
+  {
+    "id": "TX-0029",
+    "vendedor": "Laura Torres",
+    "categoria": "Hogar",
+    "monto": 593.45,
+    "fecha": "2026-05-30"
+  },
+  {
+    "id": "TX-0079",
+    "vendedor": "Ana Martínez",
+    "categoria": "Hogar",
+    "monto": 318,
+    "fecha": "2026-05-30"
+  },
+  {
+    "id": "TX-0082",
+    "vendedor": "Laura Torres",
+    "categoria": "Alimentos",
+    "monto": 752.2,
+    "fecha": "2026-05-30"
+  },
+  {
+    "id": "TX-0093",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Ropa",
+    "monto": 828.76,
+    "fecha": "2026-05-30"
+  },
+  {
+    "id": "TX-0018",
+    "vendedor": "Laura Torres",
+    "categoria": "Electrónica",
+    "monto": 1022.17,
+    "fecha": "2026-05-29"
+  },
+  {
+    "id": "TX-0047",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Deportes",
+    "monto": 463.16,
+    "fecha": "2026-05-29"
+  },
+  {
+    "id": "TX-0070",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Deportes",
+    "monto": 604.98,
+    "fecha": "2026-05-28"
+  },
+  {
+    "id": "TX-0081",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Alimentos",
+    "monto": 489.82,
+    "fecha": "2026-05-26"
+  },
+  {
+    "id": "TX-0015",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Hogar",
+    "monto": 646.57,
+    "fecha": "2026-05-25"
+  },
+  {
+    "id": "TX-0078",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Hogar",
+    "monto": 512.67,
+    "fecha": "2026-05-25"
+  },
+  {
+    "id": "TX-0053",
+    "vendedor": "María García",
+    "categoria": "Ropa",
+    "monto": 715.8,
+    "fecha": "2026-05-24"
+  },
+  {
+    "id": "TX-0063",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Alimentos",
+    "monto": 433.97,
+    "fecha": "2026-05-24"
+  },
+  {
+    "id": "TX-0022",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Electrónica",
+    "monto": 693.26,
+    "fecha": "2026-05-22"
+  },
+  {
+    "id": "TX-0037",
+    "vendedor": "Carlos López",
+    "categoria": "Electrónica",
+    "monto": 1295.46,
+    "fecha": "2026-05-21"
+  },
+  {
+    "id": "TX-0092",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Deportes",
+    "monto": 585.7,
+    "fecha": "2026-05-21"
+  },
+  {
+    "id": "TX-0089",
+    "vendedor": "Laura Torres",
+    "categoria": "Deportes",
+    "monto": 349.63,
+    "fecha": "2026-05-18"
+  },
+  {
+    "id": "TX-0072",
+    "vendedor": "Ana Martínez",
+    "categoria": "Alimentos",
+    "monto": 341,
+    "fecha": "2026-05-15"
+  },
+  {
+    "id": "TX-0074",
+    "vendedor": "Carlos López",
+    "categoria": "Hogar",
+    "monto": 1108.47,
+    "fecha": "2026-05-15"
+  },
+  {
+    "id": "TX-0083",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Hogar",
+    "monto": 501.89,
+    "fecha": "2026-05-13"
+  },
+  {
+    "id": "TX-0094",
+    "vendedor": "Laura Torres",
+    "categoria": "Hogar",
+    "monto": 977.61,
+    "fecha": "2026-05-13"
+  },
+  {
+    "id": "TX-0013",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Alimentos",
+    "monto": 856.7,
+    "fecha": "2026-05-12"
+  },
+  {
+    "id": "TX-0031",
+    "vendedor": "Laura Torres",
+    "categoria": "Deportes",
+    "monto": 419.74,
+    "fecha": "2026-05-12"
+  },
+  {
+    "id": "TX-0042",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Deportes",
+    "monto": 635.53,
+    "fecha": "2026-05-12"
+  },
+  {
+    "id": "TX-0064",
+    "vendedor": "Laura Torres",
+    "categoria": "Ropa",
+    "monto": 974.17,
+    "fecha": "2026-05-10"
+  },
+  {
+    "id": "TX-0085",
+    "vendedor": "Laura Torres",
+    "categoria": "Electrónica",
+    "monto": 1237.57,
+    "fecha": "2026-05-10"
+  },
+  {
+    "id": "TX-0086",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Ropa",
+    "monto": 960.88,
+    "fecha": "2026-05-10"
+  },
+  {
+    "id": "TX-0020",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Ropa",
+    "monto": 977.41,
+    "fecha": "2026-05-09"
+  },
+  {
+    "id": "TX-0024",
+    "vendedor": "Carlos López",
+    "categoria": "Alimentos",
+    "monto": 967.41,
+    "fecha": "2026-05-09"
+  },
+  {
+    "id": "TX-0025",
+    "vendedor": "Laura Torres",
+    "categoria": "Ropa",
+    "monto": 349.14,
+    "fecha": "2026-05-09"
+  },
+  {
+    "id": "TX-0014",
+    "vendedor": "Laura Torres",
+    "categoria": "Electrónica",
+    "monto": 463.11,
+    "fecha": "2026-05-08"
+  },
+  {
+    "id": "TX-0034",
+    "vendedor": "María García",
+    "categoria": "Hogar",
+    "monto": 600.05,
+    "fecha": "2026-05-08"
+  },
+  {
+    "id": "TX-0057",
+    "vendedor": "Laura Torres",
+    "categoria": "Alimentos",
+    "monto": 369.17,
+    "fecha": "2026-05-08"
+  },
+  {
+    "id": "TX-0021",
+    "vendedor": "Laura Torres",
+    "categoria": "Alimentos",
+    "monto": 994.59,
+    "fecha": "2026-05-06"
+  },
+  {
+    "id": "TX-0080",
+    "vendedor": "Ana Martínez",
+    "categoria": "Hogar",
+    "monto": 359.64,
+    "fecha": "2026-05-06"
+  },
+  {
+    "id": "TX-0090",
+    "vendedor": "Laura Torres",
+    "categoria": "Deportes",
+    "monto": 1084.16,
+    "fecha": "2026-05-05"
+  },
+  {
+    "id": "TX-0027",
+    "vendedor": "Carlos López",
+    "categoria": "Ropa",
+    "monto": 1128.97,
+    "fecha": "2026-04-30"
+  },
+  {
+    "id": "TX-0046",
+    "vendedor": "Laura Torres",
+    "categoria": "Hogar",
+    "monto": 485.19,
+    "fecha": "2026-04-30"
+  },
+  {
+    "id": "TX-0058",
+    "vendedor": "María García",
+    "categoria": "Deportes",
+    "monto": 409.66,
+    "fecha": "2026-04-30"
+  },
+  {
+    "id": "TX-0006",
+    "vendedor": "Ana Martínez",
+    "categoria": "Hogar",
+    "monto": 375.48,
+    "fecha": "2026-04-29"
+  },
+  {
+    "id": "TX-0091",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Ropa",
+    "monto": 960.95,
+    "fecha": "2026-04-28"
+  },
+  {
+    "id": "TX-0007",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Electrónica",
+    "monto": 1312.11,
+    "fecha": "2026-04-27"
+  },
+  {
+    "id": "TX-0067",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Ropa",
+    "monto": 1073.94,
+    "fecha": "2026-04-27"
+  },
+  {
+    "id": "TX-0028",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Deportes",
+    "monto": 743.67,
+    "fecha": "2026-04-26"
+  },
+  {
+    "id": "TX-0076",
+    "vendedor": "Laura Torres",
+    "categoria": "Deportes",
+    "monto": 770.1,
+    "fecha": "2026-04-26"
+  },
+  {
+    "id": "TX-0004",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Hogar",
+    "monto": 856.4,
+    "fecha": "2026-04-24"
+  },
+  {
+    "id": "TX-0069",
+    "vendedor": "Laura Torres",
+    "categoria": "Deportes",
+    "monto": 1228.11,
+    "fecha": "2026-04-24"
+  },
+  {
+    "id": "TX-0039",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Electrónica",
+    "monto": 1173.97,
+    "fecha": "2026-04-22"
+  },
+  {
+    "id": "TX-0088",
+    "vendedor": "María García",
+    "categoria": "Ropa",
+    "monto": 965.76,
+    "fecha": "2026-04-22"
+  },
+  {
+    "id": "TX-0038",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Electrónica",
+    "monto": 709.9,
+    "fecha": "2026-04-21"
+  },
+  {
+    "id": "TX-0040",
+    "vendedor": "Carlos López",
+    "categoria": "Ropa",
+    "monto": 802.98,
+    "fecha": "2026-04-21"
+  },
+  {
+    "id": "TX-0066",
+    "vendedor": "María García",
+    "categoria": "Deportes",
+    "monto": 745.62,
+    "fecha": "2026-04-21"
+  },
+  {
+    "id": "TX-0032",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Deportes",
+    "monto": 1178.23,
+    "fecha": "2026-04-19"
+  },
+  {
+    "id": "TX-0002",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Ropa",
+    "monto": 1164.12,
+    "fecha": "2026-04-16"
+  },
+  {
+    "id": "TX-0009",
+    "vendedor": "María García",
+    "categoria": "Electrónica",
+    "monto": 914.82,
+    "fecha": "2026-04-16"
+  },
+  {
+    "id": "TX-0016",
+    "vendedor": "Laura Torres",
+    "categoria": "Hogar",
+    "monto": 1166.02,
+    "fecha": "2026-04-16"
+  },
+  {
+    "id": "TX-0030",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Deportes",
+    "monto": 958.95,
+    "fecha": "2026-04-15"
+  },
+  {
+    "id": "TX-0075",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Deportes",
+    "monto": 455.03,
+    "fecha": "2026-04-15"
+  },
+  {
+    "id": "TX-0026",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Deportes",
+    "monto": 447.71,
+    "fecha": "2026-04-13"
+  },
+  {
+    "id": "TX-0005",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Electrónica",
+    "monto": 403.55,
+    "fecha": "2026-04-10"
+  },
+  {
+    "id": "TX-0068",
+    "vendedor": "Ana Martínez",
+    "categoria": "Electrónica",
+    "monto": 1080.23,
+    "fecha": "2026-04-10"
+  },
+  {
+    "id": "TX-0003",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Ropa",
+    "monto": 349.53,
+    "fecha": "2026-04-03"
+  },
+  {
+    "id": "TX-0001",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Hogar",
+    "monto": 539.91,
+    "fecha": "2026-04-01"
+  },
+  {
+    "id": "TX-0049",
+    "vendedor": "Laura Torres",
+    "categoria": "Ropa",
+    "monto": 1073.85,
+    "fecha": "2026-03-31"
+  },
+  {
+    "id": "TX-0048",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Ropa",
+    "monto": 417.66,
+    "fecha": "2026-03-30"
+  },
+  {
+    "id": "TX-0019",
+    "vendedor": "Laura Torres",
+    "categoria": "Ropa",
+    "monto": 890.07,
+    "fecha": "2026-03-29"
+  },
+  {
+    "id": "TX-0084",
+    "vendedor": "Laura Torres",
+    "categoria": "Ropa",
+    "monto": 580.16,
+    "fecha": "2026-03-29"
+  },
+  {
+    "id": "TX-0045",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Deportes",
+    "monto": 702.73,
+    "fecha": "2026-03-27"
+  },
+  {
+    "id": "TX-0044",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Alimentos",
+    "monto": 838.59,
+    "fecha": "2026-03-25"
+  },
+  {
+    "id": "TX-0056",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Ropa",
+    "monto": 612.12,
+    "fecha": "2026-03-25"
+  },
+  {
+    "id": "TX-0062",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Ropa",
+    "monto": 821.29,
+    "fecha": "2026-03-25"
+  },
+  {
+    "id": "TX-0050",
+    "vendedor": "Laura Torres",
+    "categoria": "Electrónica",
+    "monto": 702.53,
+    "fecha": "2026-03-23"
+  },
+  {
+    "id": "TX-0011",
+    "vendedor": "María García",
+    "categoria": "Alimentos",
+    "monto": 360.3,
+    "fecha": "2026-03-22"
+  },
+  {
+    "id": "TX-0087",
+    "vendedor": "Carlos López",
+    "categoria": "Alimentos",
+    "monto": 1023.38,
+    "fecha": "2026-03-17"
+  },
+  {
+    "id": "TX-0051",
+    "vendedor": "Ana Martínez",
+    "categoria": "Ropa",
+    "monto": 884.2,
+    "fecha": "2026-03-15"
+  },
+  {
+    "id": "TX-0060",
+    "vendedor": "Carlos López",
+    "categoria": "Hogar",
+    "monto": 1282.48,
+    "fecha": "2026-03-15"
+  },
+  {
+    "id": "TX-0065",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Ropa",
+    "monto": 360.08,
+    "fecha": "2026-03-15"
+  },
+  {
+    "id": "TX-0077",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Electrónica",
+    "monto": 798.25,
+    "fecha": "2026-03-15"
+  },
+  {
+    "id": "TX-0017",
+    "vendedor": "Ana Martínez",
+    "categoria": "Hogar",
+    "monto": 345.31,
+    "fecha": "2026-03-13"
+  },
+  {
+    "id": "TX-0043",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Electrónica",
+    "monto": 967.22,
+    "fecha": "2026-03-13"
+  },
+  {
+    "id": "TX-0055",
+    "vendedor": "Carlos López",
+    "categoria": "Alimentos",
+    "monto": 1134.91,
+    "fecha": "2026-03-13"
+  },
+  {
+    "id": "TX-0035",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Hogar",
+    "monto": 914.51,
+    "fecha": "2026-03-12"
+  },
+  {
+    "id": "TX-0061",
+    "vendedor": "Laura Torres",
+    "categoria": "Ropa",
+    "monto": 442.1,
+    "fecha": "2026-03-12"
+  },
+  {
+    "id": "TX-0041",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Alimentos",
+    "monto": 435.97,
+    "fecha": "2026-03-11"
+  },
+  {
+    "id": "TX-0008",
+    "vendedor": "Laura Torres",
+    "categoria": "Hogar",
+    "monto": 691.46,
+    "fecha": "2026-03-10"
+  },
+  {
+    "id": "TX-0023",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Ropa",
+    "monto": 1007.23,
+    "fecha": "2026-03-10"
+  },
+  {
+    "id": "TX-0052",
+    "vendedor": "María García",
+    "categoria": "Alimentos",
+    "monto": 659.86,
+    "fecha": "2026-03-10"
+  },
+  {
+    "id": "TX-0010",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Ropa",
+    "monto": 706.64,
+    "fecha": "2026-03-09"
+  },
+  {
+    "id": "TX-0071",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Alimentos",
+    "monto": 505.42,
+    "fecha": "2026-03-08"
+  },
+  {
+    "id": "TX-0033",
+    "vendedor": "Diego Ramírez",
+    "categoria": "Deportes",
+    "monto": 1146.34,
+    "fecha": "2026-03-07"
+  },
+  {
+    "id": "TX-0095",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Electrónica",
+    "monto": 557.96,
+    "fecha": "2026-03-07"
+  },
+  {
+    "id": "TX-0054",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Alimentos",
+    "monto": 602.55,
+    "fecha": "2026-03-03"
+  },
+  {
+    "id": "TX-0059",
+    "vendedor": "Pedro Sánchez",
+    "categoria": "Ropa",
+    "monto": 539.98,
+    "fecha": "2026-03-02"
+  }
+]
