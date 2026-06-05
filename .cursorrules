@@ -1,0 +1,36 @@
+# SalesView project rules
+
+## Stack and scope
+- This is a single-page React + Vite frontend. Do not add backend services, routing, authentication, persistence, or external APIs.
+- SalesView is read-only: do not add UI for creating, editing, importing, exporting, or deleting sales data.
+- Mocked data lives in JSON files under `data/` and is imported by the frontend.
+- Do not add charting libraries such as Chart.js, Recharts, or D3. Progress and breakdown visuals must use CSS-only bars.
+
+## Component convention
+- Keep each React component in its own file under `src/components/`.
+- Shared calculation and formatting logic belongs in utility modules under `src/utils/`.
+- Keep components focused on presentation and user interactions such as filters or table sorting.
+
+## Design system
+- Main background: `#F1F5F9`
+- Card background: `#FFFFFF`
+- Primary color: `#1E3A5F`
+- Positive metric: `#10B981`
+- Negative metric: `#EF4444`
+- Main text: `#0F172A`
+- Secondary text: `#64748B`
+- Borders/separators: `#E2E8F0`
+- Card shadow: `0 1px 3px rgba(0,0,0,0.1)`
+- Category colors:
+  - Electrónica: `#3B82F6`
+  - Ropa: `#8B5CF6`
+  - Hogar: `#F59E0B`
+  - Alimentos: `#10B981`
+  - Deportes: `#EF4444`
+
+## Explicit non-goals
+- No login or authentication.
+- No PDF or Excel export.
+- No dark mode.
+- No real-time data or external data connection.
+- No complex animations, tooltips, popovers, notifications, footer, or multi-page navigation.
