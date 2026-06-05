@@ -1,0 +1,114 @@
+# SalesView · Reglas del proyecto
+
+Este archivo guía a Cursor cuando trabaje sobre este repo. Mantén siempre estas
+convenciones cuando agregues, modifiques o refactorices código.
+
+## Stack y arquitectura
+
+- **Stack:** React 19 + Vite. Sin TypeScript, sin frameworks adicionales.
+- **Una sola vista:** SalesView es una single page. NO agregues react-router ni
+  segmentes el dashboard en varias rutas.
+- **Sin backend:** este proyecto no tiene servidor, base de datos ni APIs
+  externas. Toda la data vive como JSON estático en `data/`.
+- **Sin librerías de gráficos:** las barras y la barra de progreso se hacen con
+  CSS puro (`width: {porcentaje}%`). NO incluyas Chart.js, Recharts, D3, ni
+  similares.
+
+## Estructura de archivos
+
+```
+data/                 JSON mockeados (config, team, sales)
+scripts/              Generadores y utilidades dev (no se sirven al cliente)
+src/
+  App.jsx             Composición del dashboard
+  main.jsx            Entry point de Vite
+  components/         Un componente por archivo (ver lista abajo)
+  utils/              Helpers puros (format, dates, calc)
+  styles/global.css   Hoja única con design tokens y estilos
+```
+
+- **Un componente, un archivo.** Componentes principales ya separados:
+  `Header.jsx`, `PeriodFilter.jsx`, `KPICards.jsx`, `SalesTable.jsx`,
+  `CategoryBreakdown.jsx`. Si agregas otro componente, créalo como archivo
+  propio en `src/components/`.
+- Helpers van en `src/utils/`. Mantenelos como funciones puras y testeables.
+- Toda la hoja de estilos vive en `src/styles/global.css`. NO crear archivos
+  CSS por componente; usar las clases ya definidas o agregar nuevas en el mismo
+  archivo respetando la sección correspondiente.
+
+## Datos mockeados (read-only)
+
+- Las tres fuentes son `data/sales.json`, `data/team.json`, `data/config.json`.
+  Se importan estáticamente desde `App.jsx`.
+- `config.fecha_referencia` es la fecha "hoy" del demo (formato `YYYY-MM-DD`).
+  Todos los rangos de período se calculan respecto a ese valor para que el demo
+  sea reproducible. NO uses `new Date()` para "hoy" en lógica de períodos.
+- Para regenerar `sales.json` con la misma semilla:
+  `node scripts/generate-sales.js`.
+- La interfaz es **read-only**: NO agregues formularios, edición inline, ni
+  acciones que muten data.
+
+## Design system
+
+Estos tokens están definidos como variables CSS en `src/styles/global.css` bajo
+`:root`. **Usa siempre las variables**, no hardcodees colores.
+
+| Token                 | Variable           | Valor      |
+| --------------------- | ------------------ | ---------- |
+| Fondo de la página    | `--bg-page`        | `#F1F5F9`  |
+| Fondo de tarjetas     | `--bg-card`        | `#FFFFFF`  |
+| Color primario        | `--primary`        | `#1E3A5F`  |
+| Métrica positiva      | `--positive`       | `#10B981`  |
+| Métrica negativa      | `--negative`       | `#EF4444`  |
+| Texto principal       | `--text-primary`   | `#0F172A`  |
+| Texto secundario      | `--text-secondary` | `#64748B`  |
+| Bordes / separadores  | `--border`         | `#E2E8F0`  |
+| Sombra de tarjeta     | `--shadow-card`    | `0 1px 3px rgba(15,23,42,0.08)` |
+| Transición estándar   | `--transition`     | `200ms ease` |
+
+Paleta de categorías (mapa fijo en `src/App.jsx`):
+
+- Electrónica → `#3B82F6`
+- Ropa → `#8B5CF6`
+- Hogar → `#F59E0B`
+- Alimentos → `#10B981`
+- Deportes → `#EF4444`
+
+Tipografía: Inter (Google Fonts) con fallback a `system-ui`. KPIs grandes
+(28-32px, peso 700), encabezados de tabla en mayúsculas con tracking, montos
+con `font-variant-numeric: tabular-nums`.
+
+## Formato de números
+
+- Montos: `formatCurrency(value)` (en `src/utils/format.js`) — `toLocaleString('en-US')`
+  con prefijo `$` y separador de miles. Por defecto sin decimales; el ticket
+  promedio usa `{ withDecimals: true }`.
+- Porcentajes de cambio: 1 decimal, signo `+`/`-`, prefijado con flecha
+  `↑`/`↓`. Verde si positivo, rojo si negativo.
+
+## Restricciones (NO hacer)
+
+Estos puntos son del spec — respetalos en todo cambio futuro:
+
+- ❌ NO login, autenticación ni gestión de usuarios.
+- ❌ NO librerías de gráficos (Chart.js, Recharts, D3, etc.).
+- ❌ NO exportar a PDF/Excel.
+- ❌ NO modo oscuro (solo modo claro).
+- ❌ NO conexiones a APIs externas, ni datos en tiempo real.
+- ❌ NO edición de datos desde la UI (read-only).
+- ❌ NO animaciones complejas (solo transiciones CSS suaves).
+- ❌ NO routing ni múltiples páginas.
+- ❌ NO tooltips ni popovers.
+- ❌ NO notificaciones, alertas ni footer.
+
+## Responsive
+
+- Desktop (≥1080px): KPIs en fila de 4; tabla de vendedores 70% / categorías 30%.
+- Tablet (560-1080px): KPIs en grid 2×2, tabla y categorías apilados.
+- Mobile (<560px): todo apilado, KPIs en una columna.
+
+## Lint y build
+
+- `npm run lint` debe pasar sin errores.
+- `npm run build` debe completar sin errores.
+- Antes de commitear cambios significativos, corré ambos.
