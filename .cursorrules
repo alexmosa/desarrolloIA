@@ -1,0 +1,47 @@
+# SalesView Project Rules
+
+## Design system colors
+- Background main: `#F1F5F9`
+- Card background: `#FFFFFF`
+- Primary color: `#1E3A5F`
+- Positive metric: `#10B981`
+- Negative metric: `#EF4444`
+- Text primary: `#0F172A`
+- Text secondary: `#64748B`
+- Borders/separators: `#E2E8F0`
+
+## Category color palette
+- Electrónica: `#3B82F6`
+- Ropa: `#8B5CF6`
+- Hogar: `#F59E0B`
+- Alimentos: `#10B981`
+- Deportes: `#EF4444`
+
+## Component architecture
+- Keep each UI component in its own file inside `src/components/`.
+- Required core components:
+  - `Header.jsx`
+  - `PeriodFilter.jsx`
+  - `KPICards.jsx`
+  - `SalesTable.jsx`
+  - `CategoryBreakdown.jsx`
+
+## Data source rules
+- This project is frontend-only and read-only.
+- Data is mock data loaded from local JSON files under `data/`:
+  - `sales.json`
+  - `team.json`
+  - `config.json`
+- No backend, no external API calls, and no persistence layer.
+
+## Explicit exclusions ("NO incluir")
+- No login or authentication
+- No dark mode
+- No multi-page routing
+- No external charting libraries (Chart.js, Recharts, D3, etc.)
+- No export to PDF/Excel
+- No real-time data or WebSocket/polling
+- No data editing flows
+- No tooltips/popovers
+- No notifications/alerts
+- No footer
