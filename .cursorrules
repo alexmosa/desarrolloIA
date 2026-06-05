@@ -1,0 +1,50 @@
+# SalesView — Project Rules
+
+## Stack
+- React with Vite (no backend, no database, no API)
+- Pure CSS for styling (no CSS-in-JS, no Tailwind)
+- Data is mocked via JSON files in `data/`
+
+## Design System Colors
+- Background main: #F1F5F9
+- Background card: #FFFFFF (shadow: 0 1px 3px rgba(0,0,0,0.1))
+- Primary: #1E3A5F (header, titles, accents)
+- Primary light: #3B6BA5
+- Positive metric: #10B981 (green)
+- Negative metric: #EF4444 (red)
+- Text primary: #0F172A
+- Text secondary: #64748B
+- Borders: #E2E8F0
+- Category colors: Electrónica #3B82F6, Ropa #8B5CF6, Hogar #F59E0B, Alimentos #10B981, Deportes #EF4444
+
+## Typography
+- Font: Inter, system-ui, sans-serif
+- KPI values: 28-32px, weight 700
+- Change percentages: 14px, weight 600
+- Table headers: 12-13px, weight 600, uppercase, letter-spacing
+- Table data: 14px, weight 400
+- Money amounts: 14px, weight 600
+
+## Architecture
+- Each component lives in its own file under `src/components/`
+- Components: Header, PeriodFilter, KPICards, SalesTable, CategoryBreakdown
+- Data files: data/sales.json, data/team.json, data/config.json
+- All state management lives in App.jsx
+
+## Constraints — DO NOT include:
+- Login or authentication
+- Chart libraries (Chart.js, Recharts, D3.js) — use CSS bars only
+- Export to PDF/Excel
+- Dark mode
+- External API connections or real-time data
+- Data editing capabilities
+- Complex animations — only CSS transitions (200ms)
+- Multiple pages or routing — single page only
+- Tooltips or popovers
+- Notifications or alerts
+- Footer
+
+## Data
+- All data is read from JSON files in `data/` — never connect to external sources
+- Currency formatting: toLocaleString('en-US') with $ prefix
+- Date locale: es-ES for display
