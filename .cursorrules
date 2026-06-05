@@ -1,0 +1,18 @@
+SalesView project rules
+
+- Stack: React with Vite. Keep the app as a single-page, frontend-only dashboard.
+- Data is mocked and read from local JSON files under `data/`; do not add backend services, databases, authentication, or external API calls.
+- Keep each UI component in its own file under `src/components/`.
+- Visual bars for goal progress, seller share, and category share must use CSS-only divs with dynamic widths. Do not add Chart.js, Recharts, D3, or other charting libraries.
+- Design system:
+  - Main background: #F1F5F9
+  - Card background: #FFFFFF with `box-shadow: 0 1px 3px rgba(0,0,0,0.1)`
+  - Primary: #1E3A5F
+  - Positive metric: #10B981
+  - Negative metric: #EF4444
+  - Main text: #0F172A
+  - Secondary text: #64748B
+  - Borders/separators: #E2E8F0
+  - Category colors: Electrónica #3B82F6, Ropa #8B5CF6, Hogar #F59E0B, Alimentos #10B981, Deportes #EF4444
+- Do not include login/auth, data editing, export to PDF/Excel, dark mode, real-time updates, multi-page routing, complex animations, tooltips/popovers, notifications, or a footer.
+- Keep styling executive, clean, and dashboard-oriented. Numbers should be prominent, with smooth 200ms transitions for hover, sorting, and filter changes.
