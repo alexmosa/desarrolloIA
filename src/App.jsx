@@ -15,14 +15,16 @@ import {
   formatCurrency,
   formatRangeLabel,
   getPeriodDateRange,
-  getReferenceDate,
   summarizeSales,
 } from './utils';
 
 function App() {
   const [selectedPeriod, setSelectedPeriod] = useState('month');
 
-  const referenceDate = useMemo(() => getReferenceDate(salesData), []);
+  const referenceDate = useMemo(() => {
+    const today = new Date();
+    return new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12);
+  }, []);
 
   const ranges = useMemo(
     () => getPeriodDateRange(selectedPeriod, referenceDate),

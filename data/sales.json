@@ -585,118 +585,118 @@
     "vendedor": "María García",
     "categoria": "Hogar",
     "monto": 8269.96,
-    "fecha": "2026-06-02"
+    "fecha": "2026-06-01"
   },
   {
     "id": "S085",
     "vendedor": "Carlos López",
     "categoria": "Alimentos",
     "monto": 5805.4,
-    "fecha": "2026-06-03"
+    "fecha": "2026-06-01"
   },
   {
     "id": "S086",
     "vendedor": "Diego Ramírez",
     "categoria": "Hogar",
     "monto": 5735.12,
-    "fecha": "2026-06-05"
+    "fecha": "2026-06-02"
   },
   {
     "id": "S087",
     "vendedor": "Ana Martínez",
     "categoria": "Electrónica",
     "monto": 9596.12,
-    "fecha": "2026-06-06"
+    "fecha": "2026-06-02"
   },
   {
     "id": "S088",
     "vendedor": "Pedro Sánchez",
     "categoria": "Deportes",
     "monto": 5051.45,
-    "fecha": "2026-06-07"
+    "fecha": "2026-06-02"
   },
   {
     "id": "S089",
     "vendedor": "María García",
     "categoria": "Hogar",
     "monto": 8269.96,
-    "fecha": "2026-06-08"
+    "fecha": "2026-06-02"
   },
   {
     "id": "S090",
     "vendedor": "María García",
     "categoria": "Alimentos",
     "monto": 6676.21,
-    "fecha": "2026-06-10"
+    "fecha": "2026-06-03"
   },
   {
     "id": "S091",
     "vendedor": "Carlos López",
     "categoria": "Hogar",
     "monto": 8193.04,
-    "fecha": "2026-06-11"
+    "fecha": "2026-06-03"
   },
   {
     "id": "S092",
     "vendedor": "Ana Martínez",
     "categoria": "Electrónica",
     "monto": 9596.12,
-    "fecha": "2026-06-12"
+    "fecha": "2026-06-03"
   },
   {
     "id": "S093",
     "vendedor": "María García",
     "categoria": "Deportes",
     "monto": 7113.27,
-    "fecha": "2026-06-13"
+    "fecha": "2026-06-03"
   },
   {
     "id": "S094",
     "vendedor": "Pedro Sánchez",
     "categoria": "Hogar",
     "monto": 5872.87,
-    "fecha": "2026-06-15"
+    "fecha": "2026-06-04"
   },
   {
     "id": "S095",
     "vendedor": "Laura Torres",
     "categoria": "Alimentos",
     "monto": 4354.05,
-    "fecha": "2026-06-16"
+    "fecha": "2026-06-04"
   },
   {
     "id": "S096",
     "vendedor": "María García",
     "categoria": "Hogar",
     "monto": 9421.99,
-    "fecha": "2026-06-17"
+    "fecha": "2026-06-04"
   },
   {
     "id": "S097",
     "vendedor": "Carlos López",
     "categoria": "Electrónica",
     "monto": 10662.35,
-    "fecha": "2026-06-18"
+    "fecha": "2026-06-04"
   },
   {
     "id": "S098",
     "vendedor": "Diego Ramírez",
     "categoria": "Deportes",
     "monto": 4329.81,
-    "fecha": "2026-06-20"
+    "fecha": "2026-06-05"
   },
   {
     "id": "S099",
     "vendedor": "Ana Martínez",
     "categoria": "Hogar",
     "monto": 6472.14,
-    "fecha": "2026-06-21"
+    "fecha": "2026-06-05"
   },
   {
     "id": "S100",
     "vendedor": "Pedro Sánchez",
     "categoria": "Alimentos",
     "monto": 4741.05,
-    "fecha": "2026-06-22"
+    "fecha": "2026-06-05"
   }
 ]
