@@ -1,0 +1,109 @@
+# SalesView — Cursor Project Rules
+
+## Project overview
+
+SalesView is a **single-page, frontend-only React + Vite dashboard** for a
+sales team. It loads mocked data from local JSON files and renders monthly
+KPIs, a vendor breakdown table and a category breakdown panel.
+
+There is **no backend, no database, no authentication, no external API**.
+
+## Stack
+
+- React 18 + Vite (vanilla JS / JSX, no TypeScript).
+- Plain CSS (no CSS-in-JS, no Tailwind, no UI framework).
+- No charting library (Chart.js, Recharts, D3, etc.). All visual bars are
+  built with plain `<div>`s and `width: {pct}%`.
+
+## File / component conventions
+
+- One component per file under `src/components/`, named in PascalCase
+  (`KPICards.jsx`, `SalesTable.jsx`, `CategoryBreakdown.jsx`,
+  `PeriodFilter.jsx`, `Header.jsx`).
+- Pure helpers go under `src/utils/` (`format.js`, `periods.js`,
+  `calculations.js`). Components should not duplicate calculation logic.
+- App composition lives in `src/App.jsx`. State (active period, derived
+  ranges, etc.) is owned there and passed down via props.
+- Styles live in a single `src/styles.css` keyed off `sv-*` class names and
+  CSS variables defined in `:root`.
+
+## Data
+
+- All data is mocked and lives under `data/`:
+  - `data/sales.json` — list of transactions
+    (`{ id, vendedor, categoria, monto, fecha }`).
+  - `data/team.json` — vendor roster (`{ nombre, color }`).
+  - `data/config.json` — `meta_mensual`, `nombre_equipo`, `fecha_referencia`.
+- Data is imported directly with `import x from '../data/x.json'`. Vite
+  handles JSON imports natively.
+- The dashboard uses `config.fecha_referencia` as "today" so the demo is
+  deterministic — do not call `new Date()` for the reference date.
+- All date math is done in **UTC** with helpers in `src/utils/periods.js`.
+- To regenerate mock data, run `npm run generate-data`. The generator in
+  `scripts/generate-data.mjs` is seeded for reproducibility.
+
+## Design system
+
+Defined as CSS custom properties in `src/styles.css`:
+
+| Token             | Value      | Use                                  |
+| ----------------- | ---------- | ------------------------------------ |
+| `--color-bg`      | `#F1F5F9`  | App background                       |
+| `--color-surface` | `#FFFFFF`  | Card background                      |
+| `--color-primary` | `#1E3A5F`  | Header, KPI left-border, accents     |
+| `--color-pos`     | `#10B981`  | Positive deltas (↑)                  |
+| `--color-neg`     | `#EF4444`  | Negative deltas (↓)                  |
+| `--color-text`    | `#0F172A`  | Primary text                         |
+| `--color-text-muted` | `#64748B` | Secondary text                    |
+| `--color-border`  | `#E2E8F0`  | Dividers / borders                   |
+
+Category colors (used in `CategoryBreakdown.jsx`):
+
+- Electrónica `#3B82F6`
+- Ropa `#8B5CF6`
+- Hogar `#F59E0B`
+- Alimentos `#10B981`
+- Deportes `#EF4444`
+
+Typography:
+
+- `Inter` (Google Fonts) with `system-ui` fallback.
+- KPI numbers: 28–32px / weight 700.
+- Delta percentages: 14px / weight 600.
+- Table column headers: 13px / weight 600 / uppercase with tracking.
+- Table data: 14px / weight 400. Money columns: weight 600.
+
+Visual conventions:
+
+- KPI cards use `--shadow-card`, a 4px left border in `--color-primary`,
+  and an emoji icon on the left.
+- Meta progress bar uses a gradient from `--color-primary` to `#3B82F6`.
+- Category bars and vendor share bars use the entity color and rounded
+  ends (`--radius-pill`).
+- Hover states only shift background to `--color-surface-alt`.
+- Transitions: 200ms `ease` for color/background/width changes.
+
+## Hard constraints (what NOT to add)
+
+- ❌ No login / auth.
+- ❌ No charting libraries. Bars are plain CSS only.
+- ❌ No PDF / Excel export.
+- ❌ No dark mode. Light mode only.
+- ❌ No real-time data, no fetch / no external APIs.
+- ❌ No data editing UI. The dashboard is read-only.
+- ❌ No complex animations. Only short CSS transitions.
+- ❌ No routing / no multi-page setup. One page only.
+- ❌ No tooltips or popovers.
+- ❌ No notifications, no toasts.
+- ❌ No footer.
+
+## When extending the codebase
+
+- Prefer adding logic to `src/utils/*` and keeping components presentational.
+- Reuse the existing CSS variables instead of hard-coding colors.
+- Keep numeric formatting in `src/utils/format.js` (`formatMoney`,
+  `formatPercentChange`, etc.) — do not call `toLocaleString` directly in
+  components.
+- All new period options must go through `getPeriodRange` in
+  `src/utils/periods.js` so KPI / table / category breakdowns recompute
+  consistently.
