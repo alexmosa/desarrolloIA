@@ -1,0 +1,69 @@
+.header {
+  background-color: var(--color-primary);
+  padding: 0 32px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFFFFF;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  color: #93C5FD;
+}
+
+.appName {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #FFFFFF;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.teamName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #93C5FD;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.date {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 0 16px;
+    height: 56px;
+  }
+  .appName {
+    font-size: 18px;
+  }
+  .teamName {
+    font-size: 11px;
+  }
+  .date {
+    display: none;
+  }
+}

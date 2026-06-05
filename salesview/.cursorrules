@@ -1,0 +1,72 @@
+# SalesView — Cursor Rules
+
+## Project Overview
+SalesView is a read-only sales dashboard for a sales director. No backend, no auth, no routing.
+Pure React + Vite, data from local JSON files.
+
+## Stack
+- React (with hooks) + Vite
+- CSS Modules for all component styles
+- No external UI libraries, no chart libraries
+
+## Design System — Colors
+- Background main:      #F1F5F9
+- Background card:      #FFFFFF with box-shadow: 0 1px 3px rgba(0,0,0,0.1)
+- Primary (header/accents): #1E3A5F
+- Positive metric:      #10B981
+- Negative metric:      #EF4444
+- Text main:            #0F172A
+- Text secondary:       #64748B
+- Borders/separators:   #E2E8F0
+
+## Category Colors
+- Electrónica:  #3B82F6
+- Ropa:         #8B5CF6
+- Hogar:        #F59E0B
+- Alimentos:    #10B981
+- Deportes:     #EF4444
+
+## Typography
+- Font: Inter (Google Fonts), system-ui as fallback
+- KPI values:            28–32px, weight 700
+- Change percentages:    13–14px, weight 600
+- Table headers:         11–13px, weight 600, UPPERCASE, letter-spacing 0.07em
+- Table data:            14px, weight 400 (amounts: weight 600)
+- Section titles:        15px, weight 700
+
+## File & Component Conventions
+- Every React component lives in its own file: ComponentName.jsx
+- Every component has a co-located CSS Module: ComponentName.module.css
+- Components directory: src/components/
+- No inline styles except for dynamic values (e.g. width, backgroundColor driven by data)
+
+## Data
+- Data is mocked and read from public/data/ JSON files at runtime:
+  - public/data/sales.json   — list of sale transactions
+  - public/data/team.json    — list of team members with avatar colors
+  - public/data/config.json  — meta_mensual and nombre_equipo
+- Never add a backend, database, or external API call
+- Never make data editable from the UI (read-only)
+
+## Visual Bars (CSS only)
+- Progress bars, category bars, and vendor participation bars are implemented as
+  <div style={{ width: `${pct}%` }}> — pure CSS, no chart libraries
+- Bars must have border-radius: 999px
+
+## Strict Restrictions (do NOT add)
+- No login or authentication
+- No chart libraries (Chart.js, Recharts, D3, etc.)
+- No export to PDF/Excel
+- No dark mode
+- No real-time data or external API calls
+- No editable data from the UI
+- No complex animations (only CSS transition 150–300ms for hover/filter changes)
+- No multiple pages or client-side routing
+- No tooltips or popovers
+- No notifications or alerts
+- No footer
+
+## Period Filter Logic
+- Three periods: "7d" (last 7 days), "month" (current month to today), "3m" (last 3 months)
+- All KPIs, vendor table, and category breakdown recalculate on period change
+- "vs. Mes anterior" compares the same-length preceding period

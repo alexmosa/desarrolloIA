@@ -1,0 +1,68 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  padding-bottom: 40px;
+}
+
+.contentRow {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+  padding: 0 32px 0;
+}
+
+.tableCol {
+  min-width: 0;
+}
+
+.categoryCol {
+  min-width: 0;
+}
+
+/* ── Loading ──────────────────────────────────────────────────────────────── */
+.loadingScreen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: var(--bg-main);
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.loadingText {
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .contentRow {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contentRow {
+    padding: 0 16px;
+  }
+}
