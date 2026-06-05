@@ -1,0 +1,37 @@
+Project: SalesView
+
+Design system
+- Primary background: #F1F5F9
+- Surface cards/panels: #FFFFFF with soft shadow 0 1px 3px rgba(0,0,0,0.1)
+- Primary brand color: #1E3A5F
+- Positive metric color: #10B981
+- Negative metric color: #EF4444
+- Text primary: #0F172A
+- Text secondary: #64748B
+- Borders and dividers: #E2E8F0
+- Category colors:
+  - Electrónica: #3B82F6
+  - Ropa: #8B5CF6
+  - Hogar: #F59E0B
+  - Alimentos: #10B981
+  - Deportes: #EF4444
+
+Component conventions
+- Keep each React component in its own file under src/components.
+- Shared calculation and formatting helpers belong in src/utils.
+- Use CSS-only bars and progress indicators; do not add charting libraries.
+- Keep the app as a single-page React + Vite interface with no routing.
+
+Data conventions
+- Mocked data lives in local JSON files under data/.
+- Read sales, team, and config data from JSON imports only.
+- Do not add backend, authentication, persistence, or external APIs.
+
+Do not include
+- Login or user management
+- Dark mode
+- Complex charts or data-viz libraries
+- Export to PDF or Excel
+- Real-time updates or websockets
+- Editing flows for sales data
+- Tooltips, popovers, notifications, alerts, footer, or multi-page navigation

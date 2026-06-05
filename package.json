@@ -1,0 +1,34 @@
+{
+  "name": "salesview-dashboard",
+  "version": "1.0.0",
+  "description": "SalesView dashboard interno de metricas de ventas",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexmosa/desarrolloIA.git"
+  },
+  "keywords": [
+    "vite",
+    "react",
+    "dashboard",
+    "sales"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexmosa/desarrolloIA/issues"
+  },
+  "homepage": "https://github.com/alexmosa/desarrolloIA#readme",
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "vite": "^8.0.16"
+  }
+}
