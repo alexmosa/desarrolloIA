@@ -1,0 +1,64 @@
+# Reglas del proyecto — SalesView
+
+SalesView es un dashboard interno de métricas de ventas. Es **solo frontend**
+(React + Vite), de **solo lectura**, con **datos mockeados**. Respetá estas
+reglas al modificar o extender el proyecto.
+
+## Stack y estructura
+
+- React 18 + Vite. JavaScript (JSX), sin TypeScript.
+- **Cada componente vive en su propio archivo** dentro de `src/components/`:
+  `Header.jsx`, `PeriodFilter.jsx`, `KPICards.jsx`, `SalesTable.jsx`,
+  `CategoryBreakdown.jsx`. No metas varios componentes en un mismo archivo.
+- La lógica de cálculo y utilidades va en `src/utils/`
+  (`format.js`, `dates.js`, `metrics.js`), separada de la presentación.
+- Los estilos centralizados están en `src/index.css` usando variables CSS
+  (design tokens). No introducir librerías de estilos ni CSS-in-JS.
+
+## Datos (mockeados)
+
+- Los datos viven en archivos JSON dentro de `data/`:
+  `sales.json` (transacciones), `team.json` (vendedores), `config.json`
+  (meta mensual, nombre del equipo, fecha de referencia).
+- `data/sales.json` se genera de forma determinista con
+  `npm run gen:data` (`scripts/generate-data.js`). No editar `sales.json` a mano.
+- **No** conectar a APIs externas, bases de datos ni backend. Todo se lee de JSON.
+- Las fechas y los KPIs se calculan respecto a `config.fecha_referencia`
+  (no respecto al reloj del sistema) para que la demo sea determinista.
+
+## Design system (colores)
+
+Usar siempre las variables CSS definidas en `src/index.css`:
+
+- Fondo principal: `#F1F5F9` · Tarjetas: `#FFFFFF` (sombra `0 1px 3px rgba(0,0,0,0.1)`)
+- Color primario: `#1E3A5F` (header, títulos, elementos principales)
+- Métrica positiva: `#10B981` (verde, ↑) · Métrica negativa: `#EF4444` (rojo, ↓)
+- Texto principal: `#0F172A` · Texto secundario: `#64748B` · Bordes: `#E2E8F0`
+- Colores de categoría: Electrónica `#3B82F6`, Ropa `#8B5CF6`, Hogar `#F59E0B`,
+  Alimentos `#10B981`, Deportes `#EF4444` (definidos en `src/constants.js`).
+- Tipografía: Inter / system-ui. KPIs grandes (28–32px, 700); encabezados de
+  tabla en mayúsculas con letter-spacing (13px, 600).
+- Transiciones suaves de 200ms en hover, orden de tabla y cambio de filtro.
+
+## Formateo y cálculos
+
+- Montos: `toLocaleString('en-US')` con separador de miles y símbolo `$`.
+- Ticket promedio: ventas / transacciones (2 decimales).
+- % vs. período anterior: `((actual - anterior) / anterior) * 100` (1 decimal).
+  Si no hay datos previos, mostrar `—` (nunca dividir por cero).
+- % de meta: `(ventas del mes / meta_mensual) * 100`.
+- % por categoría y por vendedor: proporción sobre el total del período.
+
+## Restricciones — NO incluir
+
+- **No** login ni autenticación.
+- **No** librerías de gráficas (Chart.js, Recharts, D3). Las barras y la barra de
+  progreso se hacen con **CSS puro** (`div` con `width: {porcentaje}%`).
+- **No** exportar a PDF/Excel.
+- **No** modo oscuro (solo modo claro).
+- **No** datos en tiempo real ni APIs externas.
+- **No** edición de datos desde la UI (es read-only).
+- **No** animaciones complejas (solo transiciones CSS).
+- **No** múltiples páginas ni routing (single page).
+- **No** tooltips ni popovers (la info es visible directamente).
+- **No** notificaciones, alertas ni footer.
